@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import {Switch, Route, HashRouter} from 'react-router-dom'
+import Start from './Start';
+import Result from './Result';
+import React, {useState} from 'react'
 
 function App() {
+
+  const [playerChoise, setPlayerChoise] = useState("")
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HashRouter>
+        <Switch>
+          <Route exact path to="/">
+            <Start setPlayerChoise={setPlayerChoise}/>
+          </Route>
+          <Route path to="Result">
+            <Result playerChoise={playerChoise}/>
+          </Route>
+        </Switch>
+      </HashRouter>
     </div>
   );
 }
