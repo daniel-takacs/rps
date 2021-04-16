@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 
-function Result( {playerChoise} ) {
+function Result( {playerChoise, score, setScore} ) {
     const [gameResult, setGameResult] = useState("")
     const[computerChoise, setComputerChoise] = useState("")
     const choises = ['rock','paper','scissors']
@@ -17,16 +17,22 @@ function Result( {playerChoise} ) {
     const Conditions = ()=> {
         if (playerChoise === "rock" && computerChoise === "scissors"){
             setGameResult("win")
+            setScore(score + 1 )
         }else if (playerChoise === "rock" && computerChoise === "paper"){
             setGameResult("lose")
+            setScore(score - 1)
         }else if (playerChoise === "paper" && computerChoise === "rock"){
             setGameResult("win")
+            setScore(score + 1 )
         }else if (playerChoise === "paper" && computerChoise === "scissors"){
             setGameResult("lose")
+            setScore(score - 1)
         }else if (playerChoise === "scissors" && computerChoise === "rock"){
             setGameResult("lose")
+            setScore(score - 1)
         }else if (playerChoise === "scissors" && computerChoise === "paper"){
             setGameResult("win")
+            setScore(score + 1 )
         }else {
             setGameResult("tie")
         }
