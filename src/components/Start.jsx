@@ -1,5 +1,9 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
+import Rock from '../assets/images/icon-rock.svg'
+import Paper from '../assets/images/icon-paper.svg'
+import Scissors from '../assets/images/icon-scissors.svg'
+import '../App.css'
 
 function Start( {setPlayerChoise} ) {
 
@@ -8,16 +12,26 @@ function Start( {setPlayerChoise} ) {
     }
     
     return (
-        <div>
-            <Link to="Result">
-                <div data-id="rock" onClick={choiseHandle}>Rock</div>
-            </Link>
-            <Link to="Result">
-                <div data-id="paper" onClick={choiseHandle}>Paper</div>
-            </Link>
-            <Link to="Result">
-                <div data-id="scissors" onClick={choiseHandle}>Scissors</div>
-            </Link>
+        <div className="start">
+            <div className="triangle-up">
+                <Link to="Result">
+                    <div className="image">
+                        <img src={Paper} alt="paper" data-id="paper" onClick={choiseHandle}/>
+                    </div>
+                </Link>
+                <Link to="Result">
+                    <div className="image">
+                        <img src={Scissors} alt="scissors" data-id="scissors" onClick={choiseHandle}/>
+                    </div>
+                </Link>
+            </div>
+            <div className="triangle-down">
+                <Link to="Result">
+                    <div className="image">
+                        <img src={Rock} alt="rock" data-id="rock" onClick={choiseHandle}/>
+                    </div>
+                </Link>
+            </div>
         </div>
     )
 }

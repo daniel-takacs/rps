@@ -17,3 +17,17 @@
   justify-content: center;
   flex-direction: column;
 }
+.triangle-up {
+  display: flex;
+  
+}
+.triangle-down {
+  display: flex;
+  justify-content: center;
+}
+.image {
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 25px;
+  margin: 10px;
+}

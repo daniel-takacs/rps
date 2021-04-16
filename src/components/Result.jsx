@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
+import Rock from '../assets/images/icon-rock.svg'
+import Paper from '../assets/images/icon-paper.svg'
+import Scissors from '../assets/images/icon-scissors.svg'
 
 function Result( {playerChoise, score, setScore} ) {
     const [gameResult, setGameResult] = useState("")
@@ -45,12 +48,20 @@ function Result( {playerChoise, score, setScore} ) {
     return (
         <div>
             <Link to="/">
-                <div>player choise:{playerChoise}</div>
-                <div>computer choise:{computerChoise}</div>
-                {gameResult === "win" ? <div>Result: You Win</div> : ""}
-                {gameResult === "lose" ? <div>Result: You Lose</div> : ""}
-                {gameResult === "tie" ? <div>Result: Tie</div> : ""}
-                <div>New Game</div>
+                <div>player choise:
+                    {playerChoise == 'rock' ? <img src={Rock}/> : ''}
+                    {playerChoise == 'paper' ? <img src={Paper}/> : ''}
+                    {playerChoise == 'scissors' ? <img src={Scissors}/> : ''}
+                </div>
+                <div>computer choise:
+                    {computerChoise == 'rock' ? <img src={Rock}/> : ''}
+                    {computerChoise == 'paper' ? <img src={Paper}/> : ''}
+                    {computerChoise == 'scissors' ? <img src={Scissors}/> : ''}
+                </div>
+                    {gameResult === "win" ? <div>Result: You Win</div> : ""}
+                    {gameResult === "lose" ? <div>Result: You Lose</div> : ""}
+                    {gameResult === "tie" ? <div>Result: Tie</div> : ""}
+                <div><button>New Game</button></div>
             </Link>
         </div>
     )
