@@ -1,9 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  
 }
 .header {
   display: flex;
@@ -26,8 +32,25 @@
   justify-content: center;
 }
 .image {
-  border: 1px solid black;
-  border-radius: 100px;
+ 
   padding: 25px;
   margin: 10px;
+}
+.start, .result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+.rules {
+
+}
+.paper::after {
+
+}
+.rock{
+
+}
+.scissors {
+
 }

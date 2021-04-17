@@ -46,7 +46,7 @@ function Result( {playerChoise, score, setScore} ) {
         }, [computerChoise])
 
     return (
-        <div>
+        <div className="result">
             <Link to="/">
                 <div>player choise:
                     {playerChoise == 'rock' ? <img src={Rock}/> : ''}
