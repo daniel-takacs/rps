@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import Rock from '../assets/images/icon-rock.svg'
 import Paper from '../assets/images/icon-paper.svg'
 import Scissors from '../assets/images/icon-scissors.svg'
+import '../App.css'
 
 function Result( {playerChoise, score, setScore} ) {
     const [gameResult, setGameResult] = useState("")
@@ -49,7 +50,7 @@ function Result( {playerChoise, score, setScore} ) {
         <div className="result">
             <Link to="/">
                 <div>player choise:
-                    {playerChoise == 'rock' ? <img src={Rock}/> : ''}
+                    {playerChoise == 'rock' ? <img className="rock"src={Rock}/> : ''}
                     {playerChoise == 'paper' ? <img src={Paper}/> : ''}
                     {playerChoise == 'scissors' ? <img src={Scissors}/> : ''}
                 </div>

@@ -15,6 +15,7 @@ function Start( {setPlayerChoise} ) {
         <div className="start">
             <div className="triangle-up">
                 <Link to="Result">
+                    
                     <div className="image paper">
                         <img src={Paper} alt="paper" data-id="paper" onClick={choiseHandle}/>
                     </div>

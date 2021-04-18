@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   
 }
 .App {
@@ -9,8 +10,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+  color: #fff;
 }
+
 .header {
   display: flex;
   border: 1px solid black;
@@ -32,9 +34,8 @@ body {
   justify-content: center;
 }
 .image {
+ background-color: #fff;
  
-  padding: 25px;
-  margin: 10px;
 }
 .start, .result {
   position: absolute;
@@ -45,12 +46,43 @@ body {
 .rules {
 
 }
-.paper::after {
-
+.image {
+  margin: 12px;
 }
-.rock{
+.paper{
+  height: 50px;
+  width:50px;
+  border-radius: 50%;
+  border-color: transparent;
+  border: 15px solid #4664F4;
+  background-size: 50%;
+  padding: 20px;
+}
 
+.rock {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  border: 15px solid #DB2E4D;
+  background-size: 50%;
+  padding: 20px;
 }
 .scissors {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  border: 15px solid #EB9F0E;
+  background-size: 50%;
+  padding: 20px;
+}
+.image.paper {
+  margin: 20px;
+}
+.image.scissors {
+  margin: 20px;
+}
+.result_rock {
 
 }
