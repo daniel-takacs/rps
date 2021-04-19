@@ -44,7 +44,7 @@ body {
   transform: translate(-50%, -50%)
 }
 .rules {
-
+  color: #fff;
 }
 .image {
   margin: 12px;
@@ -77,12 +77,20 @@ body {
   background-size: 50%;
   padding: 20px;
 }
-.image.paper {
-  margin: 20px;
-}
-.image.scissors {
-  margin: 20px;
-}
+
 .result_rock {
 
+}
+.icons {
+  display: flex;
+}
+.who-win-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+.new-game-button {
+  display: flex;
+  justify-content:center;
 }

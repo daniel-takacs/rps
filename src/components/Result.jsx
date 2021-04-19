@@ -48,22 +48,29 @@ function Result( {playerChoise, score, setScore} ) {
 
     return (
         <div className="result">
-            <Link to="/">
-                <div>player choise:
-                    {playerChoise == 'rock' ? <img className="rock"src={Rock}/> : ''}
-                    {playerChoise == 'paper' ? <img src={Paper}/> : ''}
-                    {playerChoise == 'scissors' ? <img src={Scissors}/> : ''}
+                <div className="icons">
+                <div>
+                    {playerChoise == 'rock' ? <div className="image rock"><img src={Rock}/></div> : ''}
+                    {playerChoise == 'paper' ? <div className="image paper"><img src={Paper}/></div> : ''}
+                    {playerChoise == 'scissors' ? <div className="image scissors"><img src={Scissors}/></div> : ''}
+                    </div>
+                <div>
+                    {computerChoise == 'rock' ? <div className="image rock"><img src={Rock}/></div> : ''}
+                    {computerChoise == 'paper' ? <div className="image paper"><img src={Paper}/></div> : ''}
+                    {computerChoise == 'scissors' ? <div className="image scissors"><img src={Scissors}/></div> : ''}
+               </div>
+               </div>
+               <div className="who-win-text">
+                    {gameResult === "win" ? <div>You Win</div> : ""}
+                    {gameResult === "lose" ? <div>You Lose</div> : ""}
+                    {gameResult === "tie" ? <div>Tie</div> : ""}
+                    </div>
+            <Link to="/" style={{ textDecoration: 'none'}}>
+                <div className="new-game-button">
+                    <button>New Game</button>
                 </div>
-                <div>computer choise:
-                    {computerChoise == 'rock' ? <img src={Rock}/> : ''}
-                    {computerChoise == 'paper' ? <img src={Paper}/> : ''}
-                    {computerChoise == 'scissors' ? <img src={Scissors}/> : ''}
-                </div>
-                    {gameResult === "win" ? <div>Result: You Win</div> : ""}
-                    {gameResult === "lose" ? <div>Result: You Lose</div> : ""}
-                    {gameResult === "tie" ? <div>Result: Tie</div> : ""}
-                <div><button>New Game</button></div>
             </Link>
+           
         </div>
     )
 }
