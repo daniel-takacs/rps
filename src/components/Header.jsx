@@ -9,7 +9,8 @@ function Header({score}) {
                 <div>scissors</div>
             </div>
         <div className="score">
-            <div>Score:{score}</div>
+            <div>Score</div>
+            <div>{score}</div>
             </div>    
         </div>
     )

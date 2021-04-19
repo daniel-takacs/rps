@@ -15,16 +15,19 @@ body {
 
 .header {
   display: flex;
-  border: 1px solid black;
+  border: 1px solid #fff;
+  padding: 20px;
   width: 200px;
   justify-content: space-between;
-
+  text-transform: uppercase;
 }
 .game-name {
   display: flex;
   justify-content: center;
   flex-direction: column;
+ 
 }
+
 .triangle-up {
   display: flex;
   
@@ -35,7 +38,7 @@ body {
 }
 .image {
  background-color: #fff;
- 
+ margin: 15px;
 }
 .start, .result {
   position: absolute;
@@ -47,7 +50,7 @@ body {
   color: #fff;
 }
 .image {
-  margin: 12px;
+  fmargin: 20px;
 }
 .paper{
   height: 50px;
@@ -78,9 +81,6 @@ body {
   padding: 20px;
 }
 
-.result_rock {
-
-}
 .icons {
   display: flex;
 }
@@ -88,9 +88,32 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-size: 3rem;
-  margin-bottom: 50px;
+  margin-top: 25px;
 }
-.new-game-button {
+.new-game-wrapper {
   display: flex;
   justify-content:center;
+  margin-top:25px;
+}
+.new-game-button {
+  padding: 12px 50px;
+  border: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+.you-picked {
+  
+  text-align: center;
+  text-transform: uppercase;
+}
+.house-picked {
+  text-align: center;
+  text-transform: uppercase;
+}
+.result-image {
+ 
+}
+.rules {
+  position: absolute;
+  bottom: 5%;
 }
