@@ -16,19 +16,19 @@ function Start( {setPlayerChoise} ) {
             <div className="triangle-up">
                 <Link to="Result">
                     
-                    <div className="image paper">
+                    <div className="image paper start-image">
                         <img src={Paper} alt="paper" data-id="paper" onClick={choiseHandle}/>
                     </div>
                 </Link>
                 <Link to="Result">
-                    <div className="image scissors">
+                    <div className="image scissors start-image">
                         <img src={Scissors} alt="scissors" data-id="scissors" onClick={choiseHandle}/>
                     </div>
                 </Link>
             </div>
             <div className="triangle-down">
                 <Link to="Result">
-                    <div className="image rock">
+                    <div className="image rock start-image">
                         <img src={Rock} alt="rock" data-id="rock" onClick={choiseHandle}/>
                     </div>
                 </Link>
