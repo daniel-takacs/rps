@@ -1,0 +1,21 @@
+.rules {
+    fposition: relative;
+}
+.rules-button {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    padding:10px 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius:8px;
+}
+.modal-content {
+   
+    background-color:#fff;
+}

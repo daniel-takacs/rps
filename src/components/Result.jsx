@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import Rock from '../assets/images/icon-rock.svg'
 import Paper from '../assets/images/icon-paper.svg'
 import Scissors from '../assets/images/icon-scissors.svg'
-import '../App.css'
+import './styles/Result.css'
 
 function Result( {playerChoise, score, setScore} ) {
     const [gameResult, setGameResult] = useState("")

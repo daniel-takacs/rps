@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import '../App.css'
+import './styles/Footer.css'
 import RulesImg from '../assets/images/image-rules.svg'
 
 function Footer() {
@@ -8,13 +8,19 @@ function Footer() {
     const showModal = ()=>{
         setShow(true)
     }
+    const hideModal = ()=> {
+        setShow(false)
+    }
 
     return (
         <div className="rules">
-            <button onClick={showModal}>Rules</button>
-            { show ? <div className="modal">
+            <button className="rules-button" onClick={showModal}>Rules</button>
+            { show ?  
+            <div className="modal">
                 <div className="modal-content">
+                    <h2>Rules</h2>
                     <img src={RulesImg} alt="rulesimage"/>
+                    <button onClick={hideModal}>close</button>
                 </div>
             </div> : null
             }
