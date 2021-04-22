@@ -15,7 +15,34 @@
     border: 1px solid #fff;
     border-radius:8px;
 }
-.modal-content {
-   
+.modal {
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
     background-color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content > h2 {
+    text-transform: uppercase;
+}
+.rules-image {
+    margin: 100px 0;
+}
+@media screen and (min-width: 1366px) {
+    .rules-button {
+        bottom: 0;
+    }
+    
+  }

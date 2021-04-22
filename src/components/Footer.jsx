@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import './styles/Footer.css'
 import RulesImg from '../assets/images/image-rules.svg'
+import closeIcon from '../assets/images/icon-close.svg'
 
 function Footer() {
     const [show, setShow] = useState(false)
@@ -19,8 +20,8 @@ function Footer() {
             <div className="modal">
                 <div className="modal-content">
                     <h2>Rules</h2>
-                    <img src={RulesImg} alt="rulesimage"/>
-                    <button onClick={hideModal}>close</button>
+                    <img className="rules-image"src={RulesImg} alt="rulesimage"/>
+                    <img src={closeIcon} alt="closeicon"onClick={hideModal}/>
                 </div>
             </div> : null
             }

@@ -11,7 +11,7 @@ function Header({score}) {
             </div>
         <div className="score">
             <div>Score</div>
-            <div>{score}</div>
+            <div className="score-number">{score}</div>
             </div>    
         </div>
     )
