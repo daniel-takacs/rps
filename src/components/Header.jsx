@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/Header.css'
 
-function Header({score}) {
+function Header({ score }) {
     return (
         <div className="header">
             <div className="game-name">
@@ -9,9 +9,9 @@ function Header({score}) {
                 <div>paper</div>
                 <div>scissors</div>
             </div>
-        <div className="score">
-            <div>Score</div>
-            <div className="score-number">{score}</div>
+            <div className="score">
+                <div>Score</div>
+                <div className="score-number">{score}</div>
             </div>    
         </div>
     )

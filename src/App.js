@@ -1,11 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
-import {Switch, Route, HashRouter} from 'react-router-dom'
-import Start from './components/Start';
-import Result from './components/Result';
+import './App.css'
+import { Switch, Route, HashRouter } from 'react-router-dom'
+import Start from './components/Start'
+import Result from './components/Result'
 import React, {useState} from 'react'
 import Header from './components/Header'
-import Footer from './components/Footer';
+import Footer from './components/Footer'
 
 function App() {
 

@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import Rock from '../assets/images/icon-rock.svg'
 import Paper from '../assets/images/icon-paper.svg'
 import Scissors from '../assets/images/icon-scissors.svg'
@@ -15,7 +15,6 @@ function Start( {setPlayerChoise} ) {
         <div className="start">
             <div className="triangle-up">
                 <Link to="Result">
-                    
                     <div className="image paper start-image">
                         <img src={Paper} alt="paper" data-id="paper" onClick={choiseHandle}/>
                     </div>
