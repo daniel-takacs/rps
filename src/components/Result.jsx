@@ -16,7 +16,8 @@ function Result( {playerChoise, score, setScore} ) {
     }
 
     useEffect(() => {
-        newComputerChoise()
+        setTimeout(()=> {newComputerChoise()}, 800)
+        
     }, [])
 
     const Conditions = ()=> {
