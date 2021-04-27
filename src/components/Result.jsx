@@ -9,15 +9,14 @@ function Result( {playerChoise, score, setScore} ) {
 
     const [gameResult, setGameResult] = useState("")
     const [computerChoise, setComputerChoise] = useState("")
-    const choises = ['rock','paper','scissors']
-    
+
     const newComputerChoise = ()=> {
-    setComputerChoise(choises[Math.floor(Math.random()*choises.length)])
+        const choises = ['rock','paper','scissors']
+        setComputerChoise(choises[Math.floor(Math.random()*choises.length)])
     }
 
     useEffect(() => {
-        setTimeout(()=> {newComputerChoise()}, 800)
-        
+        newComputerChoise()
     }, [])
 
     const Conditions = ()=> {
@@ -42,56 +41,50 @@ function Result( {playerChoise, score, setScore} ) {
         }else {
             setGameResult("tie")
         }
-        }
+    }
     
-        useEffect(() => {
-            Conditions()
-        }, [computerChoise])
+    useEffect(() => {
+        Conditions()
+    }, [computerChoise])
 
     return (
         <div className="result">
-                <div className="icons">
-                    <div>
-                        {playerChoise == 'rock' ? 
-                            <>
-                                <div className="image rock result-image"><img src={Rock}/></div>
-                                <p className="you-picked">You Picked</p>
-                            </> 
-                            : ''}
-                        {playerChoise == 'paper' ? 
-                            <>
-                                <div className="image paper result-image"><img src={Paper}/></div>
-                                <p className="you-picked">You Picked</p>
-                            </> 
-                            : ''}
-                        {playerChoise == 'scissors' ? 
-                            <>
-                                <div className="image scissors result-image"><img src={Scissors}/></div>
-                                <p className="you-picked">You Picked</p>
-                            </> 
-                            : ''}
-                        </div>
-                    <div>
-                        {computerChoise == 'rock' ? 
-                            <>
-                                <div className="image rock result-image"><img src={Rock}/></div>
-                                <p className="house-picked">the house picked</p>
-                            </> 
-                            : ''}
-                        {computerChoise == 'paper' ? 
-                            <>
-                                <div className="image paper result-image"><img src={Paper}/></div>
-                                <p className="house-picked">the house picked</p>
-                            </> 
-                            : ''}
-                        {computerChoise == 'scissors' ? 
-                            <>
-                                <div className="image scissors result-image"><img src={Scissors}/></div>
-                                <p className="house-picked">the house picked</p>
-                            </> 
-                            : ''}
+            <div className="icons">
+                <div>
+                    {playerChoise == 'rock' ? 
+                        <>
+                            <div className="image rock result-image"><img src={Rock}/></div>
+                            <p className="you-picked">You Picked</p>
+                        </> : ''}
+                    {playerChoise == 'paper' ? 
+                        <>
+                            <div className="image paper result-image"><img src={Paper}/></div>
+                            <p className="you-picked">You Picked</p>
+                        </> : ''}
+                    {playerChoise == 'scissors' ? 
+                        <>
+                            <div className="image scissors result-image"><img src={Scissors}/></div>
+                            <p className="you-picked">You Picked</p>
+                        </> : ''}
                 </div>
-               </div>
+                <div>
+                    {computerChoise == 'rock' ? 
+                        <>
+                            <div className="image rock result-image"><img src={Rock}/></div>
+                            <p className="house-picked">the house picked</p>
+                        </> : ''}
+                    {computerChoise == 'paper' ? 
+                        <>
+                            <div className="image paper result-image"><img src={Paper}/></div>
+                            <p className="house-picked">the house picked</p>
+                        </> : ''}
+                    {computerChoise == 'scissors' ? 
+                        <>
+                            <div className="image scissors result-image"><img src={Scissors}/></div>
+                            <p className="house-picked">the house picked</p>
+                        </> : ''}
+                </div>
+            </div>
                 <div className="who-win-text">
                     {gameResult === "win" ? <div>You Win</div> : ""}
                     {gameResult === "lose" ? <div>You Lose</div> : ""}
